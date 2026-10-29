@@ -1,0 +1,11 @@
+import {Header} from './Componentes/Header';
+
+import '../global.css';
+
+export default function App() {
+  return (
+    <div>
+      <Header />
+    </div>
+  )
+}
