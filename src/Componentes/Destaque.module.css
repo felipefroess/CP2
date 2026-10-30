@@ -14,11 +14,17 @@
     padding-top: 10px;
     font-weight: bold;
     display: flex;
-    gap: 35rem; 
+    gap: 35rem;
+    justify-content: space-between;
 }
 .destaqueDesc > p{
-    color: var(--gray);
+    color: var(--blue);
     font-weight: 400;
+    border: 2px solid var(--blue);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9em;
 }
 .destaqueBlocos{
     display: grid;
@@ -34,7 +40,7 @@
     padding: 1.5rem;
 }
 .blocos:hover{
-    border: 2px solid #4e46e5cb;
+    border: 2px solid var(--gray);
 }
 .destaqueImagem{
     width: 100%;

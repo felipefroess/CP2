@@ -1,0 +1,45 @@
+footer{
+    background-color: var(--footer);
+    padding: 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.233);
+}
+.conteudo{
+    display: flex;
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+.frete{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.garantia{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    background-color: #22293B;
+    color: var(--iconfooter);
+    padding: 8px;
+    border-radius: 10px;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.subtitle{
+    color: var(--white);
+    font-size: 1em;
+    padding-bottom: 6px;
+
+}
+.desc{
+    color: var(--gray);
+    font-size: 0.9em;
+}

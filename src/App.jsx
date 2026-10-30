@@ -2,6 +2,7 @@ import {Header} from './Componentes/Header';
 import {Novidades} from './Componentes/Novidades';
 import {Categorias} from './Componentes/Categorias';
 import {Destaque} from './Componentes/Destaque';
+import {Footer} from './Componentes/Footer';
 import '../global.css';
 
 export default function App() {
@@ -19,6 +20,9 @@ export default function App() {
       <section>
         <Destaque />
       </section>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   )
 }
