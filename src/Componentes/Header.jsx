@@ -1,5 +1,4 @@
 import style from "./Header.module.css";
-import {Storefront} from '@phosphor-icons/react';
 import {Basket} from '@phosphor-icons/react';
 
 export function Header(){
@@ -7,7 +6,6 @@ export function Header(){
         <div>
             <header className={style.header}>
                 <div className={style.logo}>
-                    <Storefront height={20}/>
                     Byte
                     <span>Store</span>
                 </div>

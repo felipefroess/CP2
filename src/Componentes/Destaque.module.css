@@ -1,0 +1,92 @@
+.destaque{
+    display: flex;
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-direction: column;
+}
+.destaque > p{
+    color: var(--blue);
+    font-weight: 600;
+}
+.destaqueDesc{
+    padding-top: 10px;
+    font-weight: bold;
+    display: flex;
+    gap: 35rem; 
+}
+.destaqueDesc > p{
+    color: var(--gray);
+    font-weight: 400;
+}
+.destaqueBlocos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+}
+.blocos{
+    display: flex;
+    margin-top: 3rem;
+    border: 2px solid rgba(128, 128, 128, 0.231) ;
+    border-radius: 15px;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.blocos:hover{
+    border: 2px solid #4e46e5cb;
+}
+.destaqueImagem{
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+.destaqueName{
+    padding-top: 1rem;
+    font-size: 1.1em;
+}
+.destaquePrice{
+    padding-top: 0.7rem;
+    font-size: 0.8em;
+    color: var(--gray);
+}
+.destaquePriceStrong{
+    padding-top: 0.2rem;
+    font-size: 1.4em;
+    font-weight: 800;
+}
+.destaqueButtons{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+.detalhes{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    color: var(--black);
+    border: 2px solid rgba(128, 128, 128, 0.231);
+    border-radius: 10px;
+    padding: 10px;
+}
+.detalhes a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 550;
+    font-size: 0.9em;
+}
+.adicionar{
+    display: flex;
+    background: var(--blue);
+    align-items: center;
+    gap: 4px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.adicionar a{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 550;
+    font-size: 0.9em;
+}
