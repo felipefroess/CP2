@@ -3,7 +3,7 @@ import fotofone from '../Imagens/fone-de-ouvido.avif'
 import fotorelogio from '../Imagens/relogio.avif'
 import fototeclado from '../Imagens/teclado.avif'
 import fotomouse from '../Imagens/mouse.avif'
-import {Eyes} from '@phosphor-icons/react'
+import {Info} from '@phosphor-icons/react'
 import {ShoppingCartSimpleIcon} from '@phosphor-icons/react'
 
 export function Destaque(){
@@ -22,7 +22,7 @@ export function Destaque(){
                         <p className={style.destaquePriceStrong}>R$349,90</p>
                         <div className={style.destaqueButtons}>
                             <div className={style.detalhes}>
-                                <Eyes/>
+                                <Info/>
                                 <a href="#">Detalhes</a>
                             </div>
                             <div className={style.adicionar}>
@@ -38,7 +38,7 @@ export function Destaque(){
                         <p className={style.destaquePriceStrong}>R$289,00</p>
                         <div className={style.destaqueButtons}>
                             <div className={style.detalhes}>
-                                <Eyes/>
+                                <Info/>
                                 <a href="#">Detalhes</a>
                             </div>
                             <div className={style.adicionar}>
@@ -54,7 +54,7 @@ export function Destaque(){
                         <p className={style.destaquePriceStrong}>R$419,90</p>
                         <div className={style.destaqueButtons}>
                             <div className={style.detalhes}>
-                                <Eyes/>
+                                <Info/>
                                 <a href="#">Detalhes</a>
                             </div>
                             <div className={style.adicionar}>
@@ -70,7 +70,7 @@ export function Destaque(){
                         <p className={style.destaquePriceStrong}>R$199,90</p>
                         <div className={style.destaqueButtons}>
                             <div className={style.detalhes}>
-                                <Eyes/>
+                                <Info/>
                                 <a href="#">Detalhes</a>
                             </div>
                             <div className={style.adicionar}>

@@ -1,7 +1,6 @@
 footer{
     background-color: var(--footer);
     padding: 10px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.233);
 }
 .conteudo{
     display: flex;
@@ -12,6 +11,7 @@ footer{
     align-items: center;
     justify-content: space-between;
     gap: 15px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.233);
 }
 .frete{
     display: flex;
@@ -42,4 +42,56 @@ footer{
 .desc{
     color: var(--gray);
     font-size: 0.9em;
+}
+.sobre{
+    display: flex;
+    margin: 0 auto;
+    padding: 60px 0;
+    max-width: 1200px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.233);
+}
+.logo{
+    font-size: 2em;
+}
+#byte{
+    color: var(--white);
+}
+.logo span{
+    color: var(--blue);
+}
+.sobre p{
+    color: var(--gray);
+    padding-top: 10px;
+    width: 22rem;
+}
+.bancos{
+    display: flex;
+    padding: 1rem 1rem;
+    gap: 30px;
+}
+.pagamento span{
+    color: var(--white);
+    font-size: 1.4em;
+}
+.fotopix{
+    height: 30px;
+}
+.fotovisa{
+    height: 30px;
+}
+.fotomaster{
+    height: 30px;
+}
+.fotocompra{
+    height: 60px;
+}
+.subfooter{
+    display: flex;
+    color: var(--gray);
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.8em;
+    justify-content: center;
+    padding-top: 20px;
 }
