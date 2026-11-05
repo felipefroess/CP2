@@ -58,3 +58,8 @@
 .ativo{
     color: var(--blue) !important;
 }
+.ativoc{
+    color: var(--blue) !important;
+    border: 0.8px solid var(--blue);
+    border-radius: 10px;
+}
