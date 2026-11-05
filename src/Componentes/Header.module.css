@@ -42,12 +42,17 @@
     border-radius: 10px;
     cursor: pointer;
 }
-.carrinho > a{
+#carrinholink {
     font-weight: 600;
     font-size: 13px;
+    text-decoration: none;
+    color: var(--gray);
 }
 .carrinho:hover{
     border: 1px solid var(--blue);
+    color: var(--blue);
+}
+#carrinholink:hover{
     color: var(--blue);
 }
 .ativo{

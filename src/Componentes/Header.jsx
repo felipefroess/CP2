@@ -27,7 +27,13 @@ export function Header(){
                 </nav>
                 <div className={style.carrinho}>
                     <Basket/>
-                    <a>Carrinho</a>
+                    <NavLink 
+                        id={style.carrinholink}
+                        to="/carrinho"
+                        className={({isActive}) => isActive ? style.ativo: ''}
+                    >
+                        Carrinho
+                    </NavLink>
                 </div>
             </header>
         </div>
