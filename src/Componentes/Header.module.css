@@ -50,3 +50,6 @@
     border: 1px solid var(--blue);
     color: var(--blue);
 }
+.ativo{
+    color: var(--blue) !important;
+}
