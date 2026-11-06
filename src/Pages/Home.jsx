@@ -3,12 +3,12 @@ import { Novidades } from '../Componentes/Novidades';
 import { Categorias } from '../Componentes/Categorias';
 import { Destaque } from '../Componentes/Destaque';
 
-export function Home() {
+export function Home({onAdicionar}) {
     return (
         <main>
             <Novidades />
             <Categorias />
-            <Destaque />
+            <Destaque onAdicionar={onAdicionar}/>
         </main>
     );
 }

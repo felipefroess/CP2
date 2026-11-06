@@ -2,7 +2,7 @@ import style from "./Header.module.css";
 import {Basket} from '@phosphor-icons/react';
 import {NavLink, Link} from 'react-router-dom';
 
-export function Header(){
+export function Header({itensNoCarrinho}){
     return(
         <div>
             <header className={style.header}>
@@ -32,7 +32,7 @@ export function Header(){
                     >
                 <div className={style.carrinho}>
                     <Basket/>
-                    Carrinho
+                    Carrinho {itensNoCarrinho > 0 && `(${itensNoCarrinho})`}
                 </div>
                 </NavLink>
             </header>

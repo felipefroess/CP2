@@ -6,7 +6,7 @@ import fotomouse from '../Imagens/mouse.avif'
 import {Info} from '@phosphor-icons/react'
 import {ShoppingCartSimpleIcon} from '@phosphor-icons/react'
 
-export function Destaque(){
+export function Destaque({onAdicionar}){
     return(
         <section className={style.destaque}>
             <p>MAIS VENDIDOS</p>
@@ -25,9 +25,18 @@ export function Destaque(){
                                 <Info/>
                                 <a href="#">Detalhes</a>
                             </div>
-                            <div className={style.adicionar}>
+                            <div 
+                                 className={style.adicionar}
+                                 onClick={() => onAdicionar({
+                                    id: 1,
+                                    nome: "Headphone Bluetooth Pro Sound",
+                                    preco: 349.90,
+                                    imagem: fotofone
+                                 })}
+                                 style={{cursor: 'pointer' }}
+                            >
                                 <ShoppingCartSimpleIcon color="#ffff" weight="bold"/>
-                                <a href="#">Adicionar</a>
+                                <span>Adicionar</span>
                             </div>
                         </div>
                 </div>
