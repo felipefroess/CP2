@@ -1,5 +1,36 @@
 .container{
     margin: 0 auto;
     max-width: 1200px;
+    padding: 5rem;
+}
+.carrinho{
+    display: flex;
+    border: 1px solid rgba(128, 128, 128, 0.315);
+    border-radius: 15px;
+    align-items: center;
+    flex-direction: column;
     padding: 2rem;
+    margin: 0 auto;
+    width: 30rem;
+}
+.carrinhodesc{
+    text-align: center;
+    padding: 1rem;
+    color: var(--gray);
+}
+.btncatalogo{
+    display: flex;
+    background: var(--blue);
+    border: 1px solid var(--blue);
+    color: var(--white);
+    margin-top: 2rem;
+    padding: 10px 20px;
+    width: 160px;
+    text-decoration: none;
+    border-radius: 15px;
+    align-items: center;
+    font-weight: 600;
+}
+.tote{
+    padding: 20px;
 }
