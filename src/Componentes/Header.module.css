@@ -1,3 +1,10 @@
+.headerContainer{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    width: 100%;
+}
 .header{
     background: var(--white);
     color: var(--black);

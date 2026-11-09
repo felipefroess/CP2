@@ -10,9 +10,16 @@ import '../global.css';
 export default function App() {
   const [carrinho, setCarrinho] = useState([]);
 
+  function removerItem(indexParaRemover){
+      setCarrinho(carrinho.filter((_,index) => index !== indexParaRemover));
+    }
+
+  function limparCarrinho(){
+    setCarrinho([]);
+  }
+
   function adicionaraocarrinho(produto){
     setCarrinho([...carrinho, produto]);
-    alert(`${produto.nome} adicionado ao carrinho!`);
   }
   return (
     <BrowserRouter>
@@ -20,7 +27,11 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home onAdicionar={adicionaraocarrinho}/>} />
             <Route path="/catalogo" element={<Catalogo/>} />
-            <Route path="/carrinho" element= {<Carrinho itens={carrinho}/>} />
+            <Route path="/carrinho" element= {<Carrinho 
+            itens={carrinho}
+            onRemoverItem={removerItem}
+            onLimparCarrinho={limparCarrinho}
+            />} />
           </Routes>
           <Footer/>
     </BrowserRouter>

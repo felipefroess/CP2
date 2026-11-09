@@ -33,10 +33,9 @@ export function Destaque({onAdicionar}){
                                     preco: 349.90,
                                     imagem: fotofone
                                  })}
-                                 style={{cursor: 'pointer' }}
                             >
                                 <ShoppingCartSimpleIcon color="#ffff" weight="bold"/>
-                                <span>Adicionar</span>
+                                <a>Adicionar</a>
                             </div>
                         </div>
                 </div>
@@ -50,9 +49,16 @@ export function Destaque({onAdicionar}){
                                 <Info/>
                                 <a href="#">Detalhes</a>
                             </div>
-                            <div className={style.adicionar}>
+                            <div className={style.adicionar}
+                                onClick={() => onAdicionar({
+                                    id:2,
+                                    nome: "SmartWatch Sport Active 2",
+                                    preco: 289.00,
+                                    imagem: fotorelogio
+                                })}
+                            >
                                 <ShoppingCartSimpleIcon color="#ffff" weight="bold"/>
-                                <a href="#">Adicionar</a>
+                                <a>Adicionar</a>
                             </div>
                         </div>
                 </div>
@@ -64,11 +70,18 @@ export function Destaque({onAdicionar}){
                         <div className={style.destaqueButtons}>
                             <div className={style.detalhes}>
                                 <Info/>
-                                <a href="#">Detalhes</a>
+                                <a>Detalhes</a>
                             </div>
-                            <div className={style.adicionar}>
+                            <div className={style.adicionar}
+                                onClick={() => onAdicionar({
+                                    id: 3,
+                                    nome: "Teclado Mecanico RBG Wirelss",
+                                    preco: 419.00,
+                                    imagem: fototeclado
+                                })}     
+                            >
                                 <ShoppingCartSimpleIcon color="#ffff" weight="bold"/>
-                                <a href="#">Adicionar</a>
+                                <a>Adicionar</a>
                             </div>
                         </div>
                 </div>
@@ -82,9 +95,16 @@ export function Destaque({onAdicionar}){
                                 <Info/>
                                 <a href="#">Detalhes</a>
                             </div>
-                            <div className={style.adicionar}>
+                            <div className={style.adicionar}
+                                onClick={() => onAdicionar ({
+                                    id: 4, 
+                                    nome: "Mouse Gamer Sem Fio Ultraleve",
+                                    preco: 199.90,
+                                    imagem: fotomouse
+                                })}
+                            >
                                 <ShoppingCartSimpleIcon color="#ffff" weight="bold"/>
-                                <a href="#">Adicionar</a>
+                                <a>Adicionar</a>
                             </div>
                         </div>
                 </div>                                                

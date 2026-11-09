@@ -34,6 +34,24 @@
 .tote{
     padding: 20px;
 }
+.limparCarrinho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btnLimpar{
+    background: transparent;
+    border: 1px solid red;
+    color: red;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btnLimpar:hover{
+    background: red;
+    color: var(--white);
+}
 .produtos{
     display: flex;
     align-items: center;
@@ -47,4 +65,16 @@
     height: 60px;
     border-radius: 8px;
     object-fit: cover;
+}
+.btnRemover{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+}
+.btnRemover:hover{
+    background: #fee2e2;
 }

@@ -4,7 +4,7 @@ import {NavLink, Link} from 'react-router-dom';
 
 export function Header({itensNoCarrinho}){
     return(
-        <div>
+        <div className={style.headerContainer}>
             <header className={style.header}>
                 <div className={style.logo}>
                     Byte

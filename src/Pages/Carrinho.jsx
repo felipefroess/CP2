@@ -1,8 +1,8 @@
 import {Link} from 'react-router-dom';
 import style from './Carrinho.module.css';
-import {Tote} from '@phosphor-icons/react';
+import {Tote, Trash} from '@phosphor-icons/react';
 
-export function Carrinho({itens}){
+export function Carrinho({itens, onRemoverItem, onLimparCarrinho}){
     if(!itens || itens.length === 0){
         return(
         <main className={style.container}>
@@ -17,7 +17,12 @@ export function Carrinho({itens}){
     }
     return(
         <main className={style.container}>
+            <div className={style.limparCarrinho}>
             <h2>Seu Carrinho ({itens.length} {itens.length === 1 ? 'item' : 'itens'})</h2>
+            <button onClick={onLimparCarrinho} className={style.btnLimpar}>
+                Limpar Carrinho
+            </button>
+            </div>
             <div>
                 {itens.map((produto, index) => (
                     <div key={index} className={style.produtos}>
@@ -26,8 +31,18 @@ export function Carrinho({itens}){
                             <h4>{produto.nome}</h4>
                             <p>R$ {produto.preco.toFixed(2)}</p>
                         </div>
+                        <button onClick={() => onRemoverItem(index)} className={style.btnRemover} title="Remover produto">
+                            <Trash size={20} color="#ef4444"/>
+                        </button>
                     </div>
                 ))}
+            </div>
+            <div>
+                <h2>Resumo do Pedido</h2>
+                <p>Subtotal dos produtos</p>
+                <p>Frete</p>
+                <span>Voce ganhou Frete Grátis!</span>
+                <h3>Total</h3>
             </div>
         </main>
     );
