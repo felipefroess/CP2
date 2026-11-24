@@ -10,7 +10,7 @@ export function Novidades(){
                 <p>Encontre os melhores periféricos, fones e monitores com qualidade premium, garantia e os melhores preços para transformar o seu espaço</p>
                         <div className={style.botoes}>
                             <Link className={style.btncatalogo} to="/catalogo">Explorar Catálogo →</Link>
-                            <a href="#" className={style.btndestaques}>Ver destaques</a>
+                            <a href="#destaques" className={style.btndestaques}>Ver destaques</a>
                         </div>
             </div>
                 <div>

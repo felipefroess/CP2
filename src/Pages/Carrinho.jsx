@@ -15,34 +15,52 @@ export function Carrinho({itens, onRemoverItem, onLimparCarrinho}){
         </main>
         )
     }
+    const total = itens.reduce((acumulador, produto) => acumulador + produto.preco, 0);
     return(
         <main className={style.container}>
-            <div className={style.limparCarrinho}>
-            <h2>Seu Carrinho ({itens.length} {itens.length === 1 ? 'item' : 'itens'})</h2>
-            <button onClick={onLimparCarrinho} className={style.btnLimpar}>
-                Limpar Carrinho
-            </button>
-            </div>
-            <div>
-                {itens.map((produto, index) => (
-                    <div key={index} className={style.produtos}>
-                        <img className={style.imagemprodutos} src={produto.imagem} alt={produto.nome} />
-                        <div>
-                            <h4>{produto.nome}</h4>
-                            <p>R$ {produto.preco.toFixed(2)}</p>
+            <section className={style.produtosList}>
+                <div className={style.limparCarrinho}>
+                <h2>Seu Carrinho ({itens.length} {itens.length === 1 ? 'item' : 'itens'})</h2>
+                <button onClick={onLimparCarrinho} className={style.btnLimpar}>
+                    Limpar carrinho
+                </button>
+                </div>
+                <div>
+                    {itens.map((produto, index) => (
+                        <div key={index} className={style.produtos}>
+                            <img className={style.imagemprodutos} src={produto.imagem} alt={produto.nome} />
+                            <div>
+                                <h4>{produto.nome}</h4>
+                                <p>R$ {produto.preco.toFixed(2)}</p>
+                            </div>
+                            <button onClick={() => onRemoverItem(index)} className={style.btnRemover} title="Remover produto">
+                                <Trash size={20} color="#ef4444"/>
+                            </button>
                         </div>
-                        <button onClick={() => onRemoverItem(index)} className={style.btnRemover} title="Remover produto">
-                            <Trash size={20} color="#ef4444"/>
-                        </button>
-                    </div>
-                ))}
-            </div>
-            <div>
+                    ))}
+                </div>
+            </section>
+            <div className={style.pedido}>
                 <h2>Resumo do Pedido</h2>
-                <p>Subtotal dos produtos</p>
-                <p>Frete</p>
-                <span>Voce ganhou Frete Grátis!</span>
-                <h3>Total</h3>
+                <div className={style.linhaResumo}>
+                    <span>Subtotal dos produtos</span>
+                    <strong>R${total.toFixed(2)}</strong>
+                </div>
+                <div className={style.linhaResumo}>
+                    <span>Frete</span>
+                    <span className={style.freteGratis}>Grátis</span>
+                </div>
+                <div>
+                    <span className={style.badgeFrete}>✓ Voce ganhou Frete Grátis!</span>
+                </div>
+                <hr className={style.divisor}/>
+                <div className={style.linhaTotal}>
+                    <span>Total</span>
+                    <strong className={style.valorTotal}>R$ {total.toFixed(2)}</strong>
+                </div>
+                <button className={style.btnFinalizar}>
+                    Finalizar Compra →
+                </button>
             </div>
         </main>
     );

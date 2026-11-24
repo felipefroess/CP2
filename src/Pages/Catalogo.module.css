@@ -1,5 +1,346 @@
-.container{
-    padding: 2rem;
+.container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 3rem 2rem 5rem 2rem;
+}
+
+.cabecalho h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.cabecalho p {
+    color: var(--gray);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.boxFiltros {
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.barraBusca {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    background: #ffffff;
+}
+
+.barraBusca input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.95rem;
+    color: #0f172a;
+    font-family: inherit;
+}
+
+.barraBusca input::placeholder {
+    color: #94a3b8;
+}
+
+.filtroCategorias {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.filtroTitulo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.listaCategorias {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.btnCategoria {
+    background: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    color: #64748b;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+}
+
+.btnCategoria:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.btnCategoriaAtivo {
+    background: var(--blue);
+    border: 1px solid var(--blue);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.contador {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.gradeProdutos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+.card {
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.imagemContainer {
+    position: relative;
+    width: 100%;
+    height: 220px;
+}
+
+.tagCategoria {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #0f172a;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.info {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.nome {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
+    line-height: 1.3;
+}
+
+.labelPreco {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 0.2rem;
+}
+
+.preco {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1.25rem;
+}
+
+.botoes {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+}
+
+.btnDetalhes {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 8px;
+    background: transparent;
+    color: #0f172a;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+.btnDetalhes:hover {
+    border-color: #0f172a;
+}
+
+.btnAdicionar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--blue);
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: filter 0.2s;
+}
+
+.btnAdicionar:hover {
+    filter: brightness(0.9);
+}
+
+.modalFundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 1.5rem;
+}
+
+.modalConteudo {
+    background: #ffffff;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.btnFecharModal {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.modalImagem {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.modalInfo {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.modalCategoria {
+    display: inline-block;
+    width: fit-content;
+    background: #eff6ff;
+    color: var(--blue);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.modalInfo h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.modalDescricao {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.modalPrecoBox {
+    margin-top: 0.5rem;
+}
+
+.modalLabelPreco {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.modalPreco {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.btnAdicionarModal {
+    background: var(--blue);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 0.5rem;
+    transition: filter 0.2s;
+    font-family: inherit;
+}
+
+.btnAdicionarModal:hover {
+    filter: brightness(0.9);
 }

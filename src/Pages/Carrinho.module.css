@@ -2,10 +2,18 @@
     margin: 0 auto;
     max-width: 1200px;
     padding: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.produtosList{
+    width: 70%;
+    border: 1px solid rgba(128, 128, 128, 0.230);
+    padding: 2rem 2rem;
+    border-radius: 8px;
 }
 .carrinho{
     display: flex;
-    border: 1px solid rgba(128, 128, 128, 0.315);
+    border: 1px solid rgba(128, 128, 128, 0.230);
     border-radius: 15px;
     align-items: center;
     flex-direction: column;
@@ -41,16 +49,17 @@
 }
 .btnLimpar{
     background: transparent;
-    border: 1px solid red;
-    color: red;
-    padding: 6px 12px;
+    border: none;
+    color: #ef4444;
+    padding: 0;
     border-radius: 8px;
     font-weight: 600;
+    font-size: 0.9rem;
     cursor: pointer;
+    font-family: inherit;
 }
 .btnLimpar:hover{
-    background: red;
-    color: var(--white);
+    text-decoration: underline;
 }
 .produtos{
     display: flex;
@@ -77,4 +86,67 @@
 }
 .btnRemover:hover{
     background: #fee2e2;
+}
+.pedido{
+    border: 1px solid rgba(128, 128, 128, 0.230);
+    padding: 1.5rem;
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.pedido h2{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.linhaResumo{
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray);
+}
+.linhaResumo strong{
+    color: var(--black);
+}
+.freteGratis{
+    color: green;
+    font-weight: 600;
+}
+.badgeFrete{
+    color: green;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.divisor{
+    border: none;
+    border-top: 1px solid rgba(128, 128, 128, 0.230);
+    margin: 0.5rem 0;
+}
+.linhaTotal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.valorTotal{
+    font-size: 1.5rem;
+    color: var(--blue);
+    font-weight: 800;
+}
+.btnFinalizar{
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+.btnFinalizar:hover{
+    filter: brightness(0.9);
 }

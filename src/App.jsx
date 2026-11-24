@@ -26,7 +26,7 @@ export default function App() {
           <Header itensNoCarrinho={carrinho.length} />
           <Routes>
             <Route path="/" element={<Home onAdicionar={adicionaraocarrinho}/>} />
-            <Route path="/catalogo" element={<Catalogo/>} />
+            <Route path="/catalogo" element={<Catalogo onAdicionar={adicionaraocarrinho}/>} />
             <Route path="/carrinho" element= {<Carrinho 
             itens={carrinho}
             onRemoverItem={removerItem}

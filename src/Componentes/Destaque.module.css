@@ -1,99 +1,242 @@
-.destaque{
+.destaque {
     display: flex;
-    padding: 60px 0;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 4rem 2rem;
     flex-direction: column;
+    scroll-margin-top: 80px;
 }
-.destaque > p{
+
+.destaque > p {
     color: var(--blue);
     font-weight: 600;
 }
-.destaqueDesc{
+
+.destaqueDesc {
     padding-top: 10px;
     font-weight: bold;
     display: flex;
-    gap: 35rem;
     justify-content: space-between;
+    align-items: center;
 }
-.destaqueDesc > p{
+
+.btnCatalogoCompleto {
     color: var(--blue);
-    font-weight: 400;
     border: 2px solid var(--blue);
-    padding: 10px;
+    padding: 10px 16px;
     border-radius: 10px;
     font-weight: 600;
     font-size: 0.9em;
+    text-decoration: none;
+    transition: 0.2s;
 }
-.destaqueBlocos{
+
+.btnCatalogoCompleto:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.destaqueBlocos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2em;
 }
-.blocos{
+
+.blocos {
     display: flex;
     margin-top: 3rem;
-    border: 2px solid rgba(128, 128, 128, 0.231) ;
+    border: 2px solid rgba(128, 128, 128, 0.231);
     border-radius: 15px;
     flex-direction: column;
     padding: 1.5rem;
+    background: #ffffff;
 }
-.blocos:hover{
+
+.blocos:hover {
     border: 2px solid var(--gray);
 }
-.destaqueImagem{
+
+.destaqueImagem {
     width: 100%;
     height: 190px;
     object-fit: cover;
     display: block;
+    border-radius: 10px;
 }
-.destaqueName{
+
+.destaqueName {
     padding-top: 1rem;
     font-size: 1.1em;
 }
-.destaquePrice{
+
+.destaquePrice {
     padding-top: 0.7rem;
     font-size: 0.8em;
     color: var(--gray);
 }
-.destaquePriceStrong{
+
+.destaquePriceStrong {
     padding-top: 0.2rem;
     font-size: 1.4em;
     font-weight: 800;
 }
-.destaqueButtons{
+
+.destaqueButtons {
     display: flex;
     justify-content: space-between;
     padding-top: 1rem;
+    margin-top: auto;
 }
-.detalhes{
+
+.detalhes {
     display: flex;
-    gap: 4px;
+    gap: 6px;
     align-items: center;
     color: var(--black);
     border: 2px solid rgba(128, 128, 128, 0.231);
     border-radius: 10px;
-    padding: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85em;
+    transition: 0.2s;
+    margin-right: 0.5rem;
 }
-.detalhes a{
-    text-decoration: none;
-    color: var(--black);
-    font-weight: 550;
-    font-size: 0.9em;
+
+.detalhes:hover {
+    border-color: var(--gray);
 }
-.adicionar{
+
+.adicionar {
     display: flex;
     background: var(--blue);
     align-items: center;
-    gap: 4px;
-    padding: 5px 10px;
+    gap: 6px;
+    padding: 8px 14px;
     border-radius: 10px;
     cursor: pointer;
-}
-.adicionar a{
-    text-decoration: none;
     color: var(--white);
-    font-weight: 550;
-    font-size: 0.9em;
+    font-weight: 600;
+    font-size: 0.85em;
+    transition: filter 0.2s;
+}
+
+.adicionar:hover {
+    filter: brightness(0.9);
+}
+
+.modalFundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 1.5rem;
+}
+
+.modalConteudo {
+    background: #ffffff;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.btnFecharModal {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.modalImagem {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.modalInfo {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.modalCategoria {
+    display: inline-block;
+    width: fit-content;
+    background: #eff6ff;
+    color: var(--blue);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.modalInfo h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.modalDescricao {
+    color: var(--gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.modalPrecoBox {
+    margin-top: 0.5rem;
+}
+
+.modalLabelPreco {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.modalPreco {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.btnAdicionarModal {
+    background: var(--blue);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 0.5rem;
+    transition: filter 0.2s;
+    font-family: inherit;
+}
+
+.btnAdicionarModal:hover {
+    filter: brightness(0.9);
 }

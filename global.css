@@ -6,6 +6,9 @@
     --footer: #0e0d29;
     --iconfooter: #818CF8;
 }
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
