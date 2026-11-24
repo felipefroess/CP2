@@ -6,7 +6,7 @@ O **ByteStore** é um e-commerce moderno e responsivo voltado para periféricos,
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - **Navegação com Rotas**: Transição instantânea entre as páginas de **Início**, **Catálogo** e **Carrinho** utilizando `react-router-dom`, sem recarregar o navegador.
 - **Header Fixo**: Barra de navegação que acompanha a rolagem da página com contador de itens no carrinho em tempo real.
@@ -25,7 +25,7 @@ O **ByteStore** é um e-commerce moderno e responsivo voltado para periféricos,
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **[React](https://react.dev/)** — Biblioteca para construção das interfaces de usuário baseada em componentes.
 - **[Vite](https://vitejs.dev/)** — Ferramenta de build rápida e moderna para o ecossistema frontend.
@@ -35,7 +35,7 @@ O **ByteStore** é um e-commerce moderno e responsivo voltado para periféricos,
 
 ---
 
-## 🎓 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto representa a consolidação dos aprendizados adquiridos durante o período de trainee na **CP2 Júnior**, contemplando:
 - Criação e ciclo de vida de componentes funcionais em React.
